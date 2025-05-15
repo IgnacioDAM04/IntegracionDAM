@@ -1,14 +1,17 @@
-# Portal de Empleo - React + Ionic + PHP + MySQL
+# Portal de Empleo - React + Ionic + MySQL
 
-Este proyecto es una plataforma web que conecta empresas con usuarios interesados en encontrar trabajo. Está construido con **React** e **Ionic** en el frontend, y utiliza **PHP** como backend con una base de datos **MySQL** gestionada mediante **phpMyAdmin**.
+Aplicación web desarrollada con **React** e **Ionic** en el frontend, **Node.js** en el backend y **MySQL** como base de datos (gestionada con phpMyAdmin). El sistema permite a usuarios registrarse, ver publicaciones de empleo, inscribirse y comunicarse con empresas.
 
 ---
 
 ## 📁 Estructura del Proyecto
 
 Integracion/
+<br>
 ├── Proyecto-integracion/ # Aplicación React + Ionic
-├── backend-Integracion/ # Archivos PHP y rutas API
+<br>
+├── backend-Integracion/ # rutas API
+<br>
 └── README.md
 
 ---
