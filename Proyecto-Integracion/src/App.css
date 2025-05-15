@@ -12,8 +12,8 @@ body, html, ion-app, ion-content {
   --background: linear-gradient(to right, #1aa37a, #3ec3a6);
   height: 100vh;
   padding: 20px;
-  box-sizing: border-box; /* Asegura que el padding no sume al 100vh */
-  overflow-y: auto; /* Solo muestra scroll si realmente se necesita */
+  box-sizing: border-box;
+  overflow-y: auto; 
 }
 
 
@@ -67,7 +67,7 @@ body, html, ion-app, ion-content {
 
 .login-popup {
   position: absolute;
-  top: 60px; /* Ajusta según la altura de tu header */
+  top: 60px; 
   right: 20px;
   background-color: white;
   border: 1px solid #ccc;
@@ -295,7 +295,7 @@ body, html, ion-app, ion-content {
 .inscripciones-popup {
   position: absolute;
   top: 100%;
-  right: 0; /* En lugar de left: 0 */
+  right: 0; 
   background: #1e1e1e;
   color: #f0f0f0;
   border-radius: 10px;
@@ -334,14 +334,14 @@ body, html, ion-app, ion-content {
 }
 
 .view-inscriptions {
-  color: white; /* o el color que quieras */
+  color: white;
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
 }
 
 .view-inscriptions:hover {
-  color: #00e0ff; /* efecto al pasar el mouse, opcional */
+  color: #00e0ff; 
 }
 
 .boton-eliminar {

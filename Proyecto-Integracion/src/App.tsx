@@ -288,6 +288,9 @@ const App: React.FC = () => {
       if (data.success) {
         alert('Publicación e inscripciones eliminadas correctamente');
         cargarPublicaciones(); // o actualizar el estado local
+        setPublicacionesEmpresa((prev) =>
+        prev.filter((publi) => publi.id_publicacion !== idPublicacion)
+      );
       } else {
         alert(data.message || 'Error al eliminar publicación');
       }
@@ -358,6 +361,7 @@ const App: React.FC = () => {
   };
 
 
+
   return (
     <IonApp>
       <IonPage>
@@ -407,28 +411,7 @@ const App: React.FC = () => {
                   </span>
                 )}
 
-                {/* Ventana emergente para ver publicaciones de la empresa */}
-                {mostrarPublicacionesEmpresa && (
-                  <div className="inscripciones-popup">
-                    {publicacionesEmpresa.length === 0 ? (
-                      <p>No has publicado nada aún.</p>
-                    ) : (
-                      <ul>
-                        {publicacionesEmpresa.map((publi) => (
-                          <li key={publi.id_publicacion} style={{ marginBottom: '1rem', padding: '1rem', border: '1px solid #ddd' }}>
-                            <strong>{publi.empleo}</strong><br />
-                            <p>{publi.descripcion}</p>
-                            <button className='boton-eliminar' onClick={() => manejarEliminacionPublicacion(publi.id_publicacion)}>
-                              Eliminar publicación
-                            </button>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                )}
-
-                {/* Botón para empresas que permite ver sus publicaciones */}
+                {/* Botón y ventana para empresas que permite ver sus publicaciones */}
                 {tipoUsuario === 'empresa' && usuarioLogueado && (
                   <span style={{ position: 'relative', display: 'inline-block' }}>
                     <span
@@ -438,6 +421,32 @@ const App: React.FC = () => {
                     >
                       Ver publicaciones
                     </span>
+                    {mostrarPublicacionesEmpresa && (
+                      <div className="inscripciones-popup">
+                        {publicacionesEmpresa.length === 0 ? (
+                          <p>No has publicado nada aún.</p>
+                        ) : (
+                          <ul>
+                            {publicacionesEmpresa.map((publi) => (
+                              <li
+                                key={publi.id_publicacion}
+                                style={{ marginBottom: '1rem', padding: '1rem', border: '1px solid #ddd' }}
+                              >
+                                <strong>{publi.empleo}</strong>
+                                <br />
+                                <p>{publi.descripcion}</p>
+                                <button
+                                  className="boton-eliminar"
+                                  onClick={() => {  manejarEliminacionPublicacion(publi.id_publicacion); }}
+                                >
+                                  Eliminar publicación
+                                </button>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    )}
                   </span>
                 )}
 
