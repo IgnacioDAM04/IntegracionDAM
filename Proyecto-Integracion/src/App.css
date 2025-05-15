@@ -1,0 +1,402 @@
+/* Fondo general del contenido */
+/* Evita el scroll horizontal */
+body, html, ion-app, ion-content {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+.main-content {
+  --background: linear-gradient(to right, #1aa37a, #3ec3a6);
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box; /* Asegura que el padding no sume al 100vh */
+  overflow-y: auto; /* Solo muestra scroll si realmente se necesita */
+}
+
+
+.custom-toolbar {
+  --background: #63c6ad;
+  padding: 0 10px;
+}
+
+.toolbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+.toolbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.login {
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 30px;
+
+}
+
+.login-form {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 10px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 10px;
+  top: 50px;
+  z-index: 1001;
+}
+
+.login-popup {
+  position: absolute;
+  top: 60px; /* Ajusta según la altura de tu header */
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-popup input {
+  padding: 8px;
+  font-size: 0.9rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.login-popup button {
+  background-color: #1aa37a;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-popup button:hover {
+  background-color: #178c68;
+}
+
+
+/* Contenedor de publicaciones */
+.publications-container {
+  background-color: #d9e6e5;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+
+/* Tarjeta de publicación */
+.post-card {
+  background-color: #23463f;
+  color: white;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenido de cada publicación */
+.post-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Botón Inscribirse */
+.apply-button {
+  background-color: #1aa37a;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.apply-button:hover {
+  background-color: #178c68;
+}
+
+/* Icono de comentario */
+.chat-icon {
+  margin-left: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+.logout-button {
+  margin-right: 8px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.logout-button:hover {
+  color: #ff5e5e;
+}
+
+.logout-text {
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+.logout-text:hover {
+  color: #ff5e5e;
+}
+
+.publicacion-popup {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+
+.publicacion-popup input,
+.publicacion-popup textarea {
+  width: 100%;
+  padding: 10px 0px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.publicacion-popup textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.publicacion-popup button {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.publicacion-popup button:hover {
+  background-color: #0056b3;
+}
+
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.apply-button,
+.message-button {
+  background-color: #1aa37a;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.message-button {
+  background-color: #3c91e6;
+}
+
+.apply-button:hover {
+  background-color: #178c68;
+}
+
+.message-button:hover {
+  background-color: #2b7ec5;
+}
+
+.toggle-auth {
+  cursor: pointer;
+  text-align: center;
+  color: #1aa37a;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.toggle-auth:hover {
+  color: #178c68;
+}
+
+
+/* Botón de añadir publicación */
+.add-post {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.add-post:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+.add-post:active {
+  transform: scale(0.98);
+}
+
+.inscripciones-popup {
+  position: absolute;
+  top: 100%;
+  right: 0; /* En lugar de left: 0 */
+  background: #1e1e1e;
+  color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  max-height: 400px;
+  overflow-y: auto;
+  min-width: 250px;
+  margin-top: 8px;
+}
+
+.inscripciones-popup h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.inscripciones-popup ul {
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: disc;
+}
+
+.inscripciones-popup li {
+  margin-bottom: 10px;
+}
+
+.inscripciones-popup button {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.view-inscriptions {
+  color: white; /* o el color que quieras */
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.view-inscriptions:hover {
+  color: #00e0ff; /* efecto al pasar el mouse, opcional */
+}
+
+.boton-eliminar {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-eliminar:hover {
+  background-color: #e60000;
+}
+
+.boton-eliminar:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.mensajes-link:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.mensajes-popup {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 300px;
+  background-color: #1e1e1e;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.mensajes-lista {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+
+.formulario-popup {
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+  z-index: 1000;
+  width: 300px;
+}
